@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leyton AI Workspace</title>
+<style>
+:root{--bg:#f7f7f5;--fg:#1c1c1a;--mut:#6b6b66;--card:#fff;--bd:#e3e3de;--ac:#2f5bea}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ecece8;--mut:#9a9a93;--card:#1d1d1b;--bd:#2f2f2c;--ac:#7c9bff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif}
+header,main{max-width:1100px;margin:0 auto;padding:0 16px}
+header{padding-top:28px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);margin:0 0 16px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:8px 12px}
+.stat b{display:block;font-size:20px}
+input{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:999px;padding:4px 10px;cursor:pointer;font:inherit;font-size:13px}
+.chip[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#fff}
+h2{font-size:15px;margin:22px 0 8px;color:var(--mut);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 12px}
+.card b{font-size:14px;word-break:break-word}
+.card p{margin:4px 0 0;color:var(--mut);font-size:13px}
+.tag{font-size:11px;color:var(--mut)}
+footer{max-width:1100px;margin:32px auto;padding:0 16px;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Leyton AI Workspace</h1>
+  <p class="sub" id="gen">Cargando…</p>
+  <div class="stats" id="stats"></div>
+  <input id="q" type="search" placeholder="Buscar skill…" aria-label="Buscar skill">
+  <div class="chips" id="chips"></div>
+</header>
+<main id="main"></main>
+<footer>Generado con <code>python scripts/scan.py</code>. Solo nombres y descripciones.</footer>
+<script>
+let DATA, cat = "Todas";
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function render() {
+  const q = $("q").value.toLowerCase();
+  const list = DATA.skills.filter(s => (cat === "Todas" || s.category === cat) &&
+    (s.name + " " + s.description).toLowerCase().includes(q));
+  const groups = {};
+  list.forEach(s => (groups[s.category] ||= []).push(s));
+  let h = "";
+  for (const [c, items] of Object.entries(groups)) {
+    h += `<h2>${esc(c)} · ${items.length}</h2><div class="grid">` +
+      items.map(s => `<div class="card"><b>${esc(s.name)}</b><p>${esc(s.description || "—")}</p>` +
+        `<span class="tag">${esc(s.locations.join(", "))}</span></div>`).join("") + "</div>";
+  }
+  if (cat === "Todas" && !q && DATA.plugins.length) {
+    h += `<h2>Plugins de Claude Code · ${DATA.plugins.length}</h2><div class="grid">` +
+      DATA.plugins.map(p => `<div class="card"><b>${esc(p.name)}</b><p>v${esc(p.version)} · ${esc(p.scope)}</p></div>`).join("") + "</div>";
+  }
+  $("main").innerHTML = h || "<p>Sin resultados.</p>";
+}
+fetch("data.json").then(r => r.json()).then(d => {
+  DATA = d;
+  $("gen").textContent = "Actualizado " + d.generated;
+  const cats = [...new Set(d.skills.map(s => s.category))];
+  $("stats").innerHTML = `<div class="stat"><b>${d.skills.length}</b>skills</div>` +
+    `<div class="stat"><b>${cats.length}</b>categorías</div><div class="stat"><b>${d.plugins.length}</b>plugins</div>`;
+  $("chips").innerHTML = ["Todas", ...cats].map(c =>
+    `<button class="chip" aria-pressed="${c === cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  $("chips").onclick = e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    cat = b.dataset.c;
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  };
+  $("q").oninput = render;
+  render();
+}).catch(() => $("gen").textContent = "No se pudo cargar data.json");
+</script>
+</body>
+</html>
