@@ -1,0 +1,25 @@
+{
+  "title": "La Guitarra & La Cuerda",
+  "subtitle": "El ritual de afinar, practicar acordes y desconectar la pantalla.",
+  "learningJourney": "Tocar guitarra es mi refugio análogo. Cuando los dedos tocan las cuerdas y resuena la madera, no hay notificaciones ni compiladores; solo tensión, ritmo y el esfuerzo paciente de dominar una transición limpia entre acordes.",
+  "favoriteGenres": [
+    "Rock Clásico & Acústico",
+    "Indie Folk & Fingerstyle",
+    "Blues & Armonías Menores"
+  ],
+  "inspirations": [
+    {
+      "artist": "Pioneros del Acústico & Folk",
+      "influence": "Arpegios hipnóticos y narrativas íntimas hechas con una sola guitarra."
+    },
+    {
+      "artist": "Guitarras de Rock & Solos Vocales",
+      "influence": "La capacidad de una nota sostenida para transmitir emoción sin palabras."
+    }
+  ],
+  "practiceGoals": [
+    "Fluidez en cambios limpios con cejilla en todo el diapasón",
+    "Independencia del pulgar en patrones de fingerpicking",
+    "Improvisación con escala pentatónica sin mirar las cuerdas"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Fútbol: El Arte de la Jugada",
+  "subtitle": "Pizarras, tardes de estadio y la estética del pase perfecto.",
+  "reflection": "Para mí el fútbol es estética y geometría en movimiento. No es solo el resultado, es la pausa previa al pase entre líneas, la presión coordinada y el drama colectivo que paraliza el tiempo por noventa minutos.",
+  "teamsRanking": [
+    {
+      "rank": 1,
+      "name": "Equipo Favorito Principal",
+      "country": "Local & Pasión",
+      "description": "El club que define las tardes de fin de semana y los recuerdos compartidos con la familia."
+    },
+    {
+      "rank": 2,
+      "name": "Club Histórico Europeo",
+      "country": "Europa",
+      "description": "Admiración por su mística competitiva y noches europeas inolvidables."
+    },
+    {
+      "rank": 3,
+      "name": "Fútbol de Posesión & Academia",
+      "country": "Global",
+      "description": "Apreciación por las escuelas de fútbol que priorizan el juego de posición y la creatividad."
+    }
+  ],
+  "favoriteLeagues": [
+    "Premier League (Ritmo & Intensidad)",
+    "La Liga (Táctica & Pausa)",
+    "Champions League (El pináculo)"
+  ],
+  "favoritePlayers": [
+    {
+      "name": "El Mediapunta Creativo",
+      "position": "Volante 10",
+      "era": "Clásica & Moderna",
+      "why": "Jugadores que juegan con la cancha en la cabeza antes de recibir la pelota."
+    },
+    {
+      "name": "El Extremo Eléctrico",
+      "position": "Extremo",
+      "era": "Contemporánea",
+      "why": "Desequilibrio puro, gambeta hacia adelante y valentía en el uno contra uno."
+    }
+  ],
+  "memorableMoments": [
+    {
+      "match": "Remontadas legendarias de copa",
+      "year": "Recuerdo imborrable",
+      "note": "La confirmación de que hasta el minuto 95 nada está escrito."
+    }
+  ]
+}

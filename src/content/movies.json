@@ -1,0 +1,42 @@
+{
+  "title": "La Estantería de Películas",
+  "subtitle": "Cintas que se quedan grabadas mucho después de los créditos.",
+  "cinemaLove": "Tengo debilidad por el cine que no tiene prisa. Planos largos, silencios que dicen más que los diálogos y directores que confían en que el espectador sabrá sentir sin que le subrayen la emoción con música estridente.",
+  "topMovies": [
+    {
+      "rank": 1,
+      "title": "Cinema Paradiso",
+      "director": "Giuseppe Tornatore",
+      "year": 1988,
+      "impression": "El tributo definitivo al amor por el cine, la infancia y los besos cortados."
+    },
+    {
+      "rank": 2,
+      "title": "Blade Runner 2049",
+      "director": "Denis Villeneuve",
+      "year": 2017,
+      "impression": "Poesía visual, escala descomunal y una pregunta desgarradora sobre la soledad."
+    },
+    {
+      "rank": 3,
+      "title": "In the Mood for Love",
+      "director": "Wong Kar-wai",
+      "year": 2000,
+      "impression": "La elegancia del deseo contenido bajo la lluvia y los pasillos estrechos."
+    }
+  ],
+  "favoriteDirectors": [
+    {
+      "name": "Denis Villeneuve",
+      "hallmark": "Atmósferas abrumadoras, sonido inmersivo y narrativa sobria."
+    },
+    {
+      "name": "Hayao Miyazaki",
+      "hallmark": "La magia de lo cotidiano, el viento y la naturaleza viva."
+    },
+    {
+      "name": "Christopher Nolan",
+      "hallmark": "El tiempo como obsesión y rompecabezas narrativo."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "La Mesa de Café",
+  "subtitle": "Molienda, temperatura del agua y el silencio de las mañanas.",
+  "ritual": "Preparar café es mi ancla diaria. Pesar los granos, calibrar la molienda y observar el primer bloom del agua caliente es una pequeña ceremonia de paciencia antes de comenzar cualquier actividad.",
+  "brewingMethods": [
+    {
+      "id": "v60",
+      "name": "Hario V60 (Pour-over)",
+      "ratio": "1:15 (20g café / 300g agua)",
+      "grind": "Media-fina",
+      "time": "2:45 min",
+      "tastingNotes": "Taza limpia, notas florales, acidez cítrica brillante.",
+      "description": "El método favorito para apreciar orígenes lavados y cafés de alta especialidad."
+    },
+    {
+      "id": "aeropress",
+      "name": "AeroPress (Invertido)",
+      "ratio": "1:13 (18g café / 230g agua)",
+      "grind": "Media",
+      "time": "2:00 min",
+      "tastingNotes": "Cuerpo medio, dulzor balanceado, versatilidad total.",
+      "description": "Rápido, noble y consistente. Ideal para tardes de trabajo enfocado."
+    },
+    {
+      "id": "french-press",
+      "name": "Prensa Francesa",
+      "ratio": "1:14 (25g café / 350g agua)",
+      "grind": "Gruesa",
+      "time": "4:00 min",
+      "tastingNotes": "Cuerpo denso, aceites naturales, final chocolatoso.",
+      "description": "El confort de un café con cuerpo redondo para las mañanas lentas de domingo."
+    }
+  ],
+  "favoriteOrigins": [
+    "Colombia (Huila, Nariño - Frutales y caramelos)",
+    "Etiopía (Yirgacheffe - Jazmín y bergamota)",
+    "Guatemala (Antigua - Chocolate y especias)"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "El Tocadiscos & La Música",
+  "subtitle": "Vinilos que giran a 33 RPM y bandas sonoras para cada estado de ánimo.",
+  "philosophy": "La música es la textura invisible de la casa. Un día cambia completamente según el disco que pongas al despertar o la melodía suave que acompaña una taza de café en el balcón.",
+  "curatedPlaylists": [
+    {
+      "name": "Mañanas de Café & Calma",
+      "mood": "Tranquilidad / Foco",
+      "spotifyId": "37i9dQZF1DXcBWIGoYBM5M",
+      "description": "Guitarras acústicas suaves, piano neoclásico y texturas ambientales."
+    },
+    {
+      "name": "Tarde de Código & Concentración",
+      "mood": "Flow / Lofi & Ambient",
+      "spotifyId": "37i9dQZF1DXdLEN7aqioXM",
+      "description": "Beats lentos y envolventes para sumergirse en la solución de problemas."
+    },
+    {
+      "name": "Atardecer & Montañas",
+      "mood": "Melancolía cálida",
+      "spotifyId": "37i9dQZF1DWV7EzJMK2FUI",
+      "description": "Indie folk, vientos suaves y canciones para contemplar la vista."
+    }
+  ],
+  "favoriteArtists": [
+    "Radiohead",
+    "Ludovico Einaudi",
+    "Bon Iver",
+    "Pink Floyd",
+    "Nils Frahm"
+  ]
+}

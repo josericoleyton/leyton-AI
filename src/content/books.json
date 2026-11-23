@@ -1,0 +1,38 @@
+{
+  "title": "La Biblioteca Personal",
+  "subtitle": "Páginas que pausaron el mundo y ampliaron el mapa mental.",
+  "currentlyReading": {
+    "title": "A Philosophy of Software Design",
+    "author": "John Ousterhout",
+    "thought": "Una reflexión lúcida sobre la complejidad, la profundidad modular y el valor de diseñar sistemas para durar."
+  },
+  "readingList": [
+    {
+      "title": "Klara y el Sol",
+      "author": "Kazuo Ishiguro",
+      "genre": "Ficción / Humanidad",
+      "takeaway": "Una mirada melancólica y tierna sobre qué significa amar, observar y tener un alma.",
+      "highlight": true
+    },
+    {
+      "title": "El elogio de la lentitud",
+      "author": "Carl Honoré",
+      "genre": "Filosofía de vida",
+      "takeaway": "El recordatorio de que vivir mejor casi nunca significa ir más rápido.",
+      "highlight": true
+    },
+    {
+      "title": "El hombre en busca de sentido",
+      "author": "Viktor Frankl",
+      "genre": "Psicología & Resiliencia",
+      "takeaway": "La dignidad humana inquebrantable encontrada en la elección de nuestra propia actitud.",
+      "highlight": false
+    }
+  ],
+  "genres": [
+    "Filosofía & Vidas Lentas",
+    "Ciencia Ficción Humanista",
+    "Arquitectura & Diseño de Sistemas",
+    "Ensayos & Biografías"
+  ]
+}

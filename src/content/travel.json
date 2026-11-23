@@ -1,0 +1,59 @@
+{
+  "title": "El Balcón, Las Montañas & El Viaje",
+  "subtitle": "Horizontes lejanos, mapas gastados y la emoción de llegar a un lugar nuevo.",
+  "philosophy": "Viajar no es coleccionar sellos ni correr para tachar monumentos. Es caminar sin mapa por calles empedradas, probar la comida local en un puesto cualquiera y recordar lo inmenso y diverso que es este mundo.",
+  "countriesVisited": [
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "year": "Hogar",
+      "memory": "El verde infinito de la cordillera andina y la calidez de su gente."
+    },
+    {
+      "code": "MEX",
+      "name": "México",
+      "year": "2022",
+      "memory": "Cultura milenaria, el aroma a copal y sabores inolvidables."
+    },
+    {
+      "code": "ESP",
+      "name": "España",
+      "year": "2023",
+      "memory": "Caminar por Madrid al atardecer y perderse en el barrio de las Letras."
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "year": "2024",
+      "memory": "Cafés históricos de Buenos Aires, librerías infinitas y la pasión del sur."
+    }
+  ],
+  "citiesVisited": [
+    "Medellín",
+    "Bogotá",
+    "Cartagena",
+    "Ciudad de México",
+    "Oaxaca",
+    "Madrid",
+    "Barcelona",
+    "Buenos Aires",
+    "Bariloche"
+  ],
+  "bucketList": [
+    {
+      "place": "Kioto & Los Alpes Japoneses",
+      "country": "Japón",
+      "reason": "La armonía entre templos milenarios, jardines zen y la cultura del detalle."
+    },
+    {
+      "place": "Dolomitas",
+      "country": "Italia",
+      "reason": "Rutas de senderismo entre paredes de roca blanca y lagos color esmeralda."
+    },
+    {
+      "place": "Patagonia Chilena & Torres del Paine",
+      "country": "Chile",
+      "reason": "La inmensidad del viento y los glaciares en el fin del mundo."
+    }
+  ]
+}

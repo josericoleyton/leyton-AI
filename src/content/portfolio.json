@@ -1,0 +1,58 @@
+{
+  "title": "Trayectoria & Artesanía Digital",
+  "subtitle": "Software engineering con calma, rigor y diseño reflexivo.",
+  "philosophy": "Construir software no se trata de velocidad desmedida, sino de convergencia: código legible, decisiones duraderas y la satisfacción de crear herramientas con calma y propósito.",
+  "currentProject": {
+    "name": "Personal Web Ecosystem (Leyton-AI)",
+    "description": "Exploración de interfaces inmersivas espaciales y arquitecturas UI basadas en metáforas cotidianas.",
+    "status": "En desarrollo activo",
+    "tags": ["Next.js", "Motion", "Tailwind CSS", "TypeScript"]
+  },
+  "timeline": [
+    {
+      "period": "2023 - Presente",
+      "role": "Senior Full-Stack Engineer",
+      "company": "Proyectos & Consultoría Especializada",
+      "description": "Liderando arquitectura frontend, diseño de sistemas profundos e integración de modelos de lenguaje con flujos de trabajo autónomos.",
+      "details": [
+        "Diseño de arquitecturas modulares y sistemas de diseño escalables",
+        "Implementación de testing automatizado estricto y pipelines CI/CD",
+        "Orquestación de workflows y agentes cognitivos"
+      ],
+      "skills": ["TypeScript", "React", "Next.js", "Node.js", "Testing"]
+    },
+    {
+      "period": "2020 - 2023",
+      "role": "Software Engineer",
+      "company": "Equipos de Producto y Plataforma",
+      "description": "Desarrollo de aplicaciones web de alto rendimiento, optimización de renderizado y colaboración estrecha con diseñadores de producto.",
+      "details": [
+        "Desarrollo de interfaces accesibles y sistemas de microfrontends",
+        "Refactorización hacia arquitecturas desacopladas y de bajo acoplamiento"
+      ],
+      "skills": ["React", "JavaScript", "REST APIs", "CSS Architecture"]
+    }
+  ],
+  "techStack": [
+    {
+      "category": "Frontend & UI",
+      "skills": ["TypeScript", "React", "Next.js", "Tailwind CSS", "Motion"]
+    },
+    {
+      "category": "Backend & Core",
+      "skills": ["Node.js", "Express", "PostgreSQL", "REST", "GraphQL"]
+    },
+    {
+      "category": "Prácticas & Calidad",
+      "skills": ["TDD / Vitest / Jest", "Deep Modules", "Clean Architecture", "Atomic Design"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Ingeniería de Software / Sistemas",
+      "degree": "Grado Profesional",
+      "year": "2019",
+      "description": "Fundamentos de computación, estructuras de datos, diseño de algoritmos y arquitectura de software."
+    }
+  ]
+}
