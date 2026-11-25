@@ -19,6 +19,253 @@ body {
   outline-offset: 2px;
 }
 
+/* --- Ambient Illustrated Loft Animations --- */
+
+/* Gentle wind sway for floor and shelf plants */
+@keyframes plant-sway-slow {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(1.2deg) skewX(0.4deg);
+  }
+  66% {
+    transform: rotate(-1.4deg) skewX(-0.5deg);
+  }
+}
+
+@keyframes plant-sway-breeze {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-1.6deg) skewX(-0.6deg);
+  }
+  75% {
+    transform: rotate(1.1deg) skewX(0.4deg);
+  }
+}
+
+@keyframes plant-sway-quick {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1.8deg) skewX(0.6deg);
+  }
+}
+
+/* Gentle sleeping / breathing pulse for cats */
+@keyframes cat-breathing {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+  }
+  50% {
+    transform: scaleY(1.028) translateY(-1px);
+  }
+}
+
+@keyframes cat-calico-rest {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.02) scaleY(1.03) rotate(-0.5deg);
+  }
+}
+
+/* Vintage CRT TV screen phosphor glow & flicker */
+@keyframes tv-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(46, 107, 62, 0.45)) brightness(1);
+  }
+  25% {
+    filter: drop-shadow(0 0 10px rgba(46, 107, 62, 0.65)) brightness(1.03);
+  }
+  65% {
+    filter: drop-shadow(0 0 5px rgba(46, 107, 62, 0.4)) brightness(0.97);
+  }
+  85% {
+    filter: drop-shadow(0 0 9px rgba(46, 107, 62, 0.6)) brightness(1.02);
+  }
+}
+
+/* Film reel vintage slow continuous rotation */
+@keyframes reel-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rising coffee steam - Multi-wisp realistic smoke */
+@keyframes steam-rise-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(0.6) scaleY(0.6);
+  }
+  25% {
+    opacity: 0.75;
+  }
+  65% {
+    opacity: 0.45;
+    transform: translateY(-18px) scaleX(1.2) scaleY(1.2) translateX(-3px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-34px) scaleX(1.8) scaleY(1.5) translateX(-7px);
+  }
+}
+
+@keyframes steam-rise-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(0.5) scaleY(0.5);
+  }
+  30% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateY(-22px) scaleX(1.3) scaleY(1.3) translateX(4px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scaleX(1.9) scaleY(1.6) translateX(8px);
+  }
+}
+
+@keyframes steam-rise-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(0.7) scaleY(0.7);
+  }
+  35% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.35;
+    transform: translateY(-16px) scaleX(1.4) scaleY(1.2) translateX(1px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scaleX(1.7) scaleY(1.4) translateX(2px);
+  }
+}
+
+/* Floating animation for always-visible cat status badges */
+@keyframes badge-float-gentle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.03);
+  }
+}
+
+.anim-badge-float {
+  animation: badge-float-gentle 2.8s ease-in-out infinite;
+}
+
+.anim-badge-float-alt {
+  animation: badge-float-gentle 3.2s ease-in-out infinite 0.7s;
+}
+
+.anim-steam-1 {
+  animation: steam-rise-1 2.6s ease-out infinite;
+}
+
+.anim-steam-2 {
+  animation: steam-rise-2 3.2s ease-out infinite 0.8s;
+}
+
+.anim-steam-3 {
+  animation: steam-rise-3 2.9s ease-out infinite 1.6s;
+}
+
+/* Laptop code screen shimmer */
+@keyframes code-shimmer {
+  0%, 100% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 3px rgba(200, 109, 81, 0.3));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(200, 109, 81, 0.6));
+  }
+}
+
+/* Balcony morning sunbeam pulse */
+@keyframes sun-shimmer {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+/* Animation utility classes */
+.anim-plant-monstera {
+  animation: plant-sway-slow 6.5s ease-in-out infinite;
+  transform-origin: 50% 95%;
+}
+
+.anim-plant-tall {
+  animation: plant-sway-breeze 7.2s ease-in-out infinite 0.8s;
+  transform-origin: 50% 95%;
+}
+
+.anim-plant-fg-left {
+  animation: plant-sway-slow 5.8s ease-in-out infinite 0.4s;
+  transform-origin: 10% 95%;
+}
+
+.anim-plant-fg-right {
+  animation: plant-sway-breeze 6.2s ease-in-out infinite 1.2s;
+  transform-origin: 90% 95%;
+}
+
+.anim-plant-table {
+  animation: plant-sway-quick 5s ease-in-out infinite 0.3s;
+  transform-origin: 50% 90%;
+}
+
+.anim-cat-grey {
+  animation: cat-breathing 4s ease-in-out infinite;
+  transform-origin: 50% 85%;
+}
+
+.anim-cat-calico {
+  animation: cat-calico-rest 4.5s ease-in-out infinite 0.5s;
+  transform-origin: 50% 80%;
+}
+
+.anim-tv {
+  animation: tv-glow 3.5s ease-in-out infinite;
+}
+
+.anim-reel {
+  animation: reel-spin 24s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.anim-steam {
+  animation: steam-drift 2.8s ease-out infinite;
+}
+
+.anim-laptop-screen {
+  animation: code-shimmer 4s ease-in-out infinite;
+}
+
+.anim-sunbeam {
+  animation: sun-shimmer 8s ease-in-out infinite;
+}
+
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

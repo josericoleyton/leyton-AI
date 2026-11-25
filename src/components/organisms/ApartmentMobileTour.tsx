@@ -80,7 +80,7 @@ export function ApartmentMobileTour() {
           Recorrido Espacial
         </span>
         <h1 className="text-2xl font-serif font-bold text-espresso mt-1">
-          El Apartamento de Jose
+          El Apartamento de Leyton
         </h1>
         <p className="text-xs text-espresso/70 mt-2 max-w-xs mx-auto leading-relaxed">
           Cada rincón de este espacio representa una faceta de mi vida y mi forma de habitar el mundo.

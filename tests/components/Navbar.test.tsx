@@ -18,7 +18,7 @@ describe('Navbar Component', () => {
         <Navbar />
       </NavigationProvider>
     );
-    expect(screen.getByText(/Jose/i)).toBeInTheDocument();
+    expect(screen.getByText(/Leyton/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Volver al apartamento/i)).toBeInTheDocument();
   });
 

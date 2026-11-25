@@ -1,0 +1,405 @@
+{
+  "background": {
+    "file": "background.png",
+    "webp": "background.webp",
+    "is_bg": true,
+    "width": 1540,
+    "height": 1024
+  },
+  "bookshelf": {
+    "file": "bookshelf.png",
+    "type": "interactive",
+    "portal_id": "bookshelf",
+    "z_index": 15,
+    "bbox": [
+      0,
+      0,
+      555,
+      299
+    ],
+    "pos": {
+      "left": 0.0,
+      "top": 0.0,
+      "width": 36.039,
+      "height": 29.1992
+    },
+    "dimensions": [
+      555,
+      299
+    ]
+  },
+  "movie_shelf": {
+    "file": "movie_shelf.png",
+    "type": "interactive",
+    "portal_id": "movies",
+    "z_index": 15,
+    "bbox": [
+      0,
+      413,
+      232,
+      710
+    ],
+    "pos": {
+      "left": 0.0,
+      "top": 40.332,
+      "width": 15.0649,
+      "height": 29.0039
+    },
+    "dimensions": [
+      232,
+      297
+    ]
+  },
+  "film_reel": {
+    "file": "film_reel.png",
+    "type": "interactive",
+    "portal_id": "movies",
+    "z_index": 16,
+    "bbox": [
+      62,
+      354,
+      180,
+      478
+    ],
+    "pos": {
+      "left": 4.026,
+      "top": 34.5703,
+      "width": 7.6623,
+      "height": 12.1094
+    },
+    "dimensions": [
+      118,
+      124
+    ]
+  },
+  "tv": {
+    "file": "tv.png",
+    "type": "interactive",
+    "portal_id": "tv",
+    "z_index": 16,
+    "bbox": [
+      187,
+      337,
+      399,
+      536
+    ],
+    "pos": {
+      "left": 12.1429,
+      "top": 32.9102,
+      "width": 13.7662,
+      "height": 19.4336
+    },
+    "dimensions": [
+      212,
+      199
+    ]
+  },
+  "plant_monstera": {
+    "file": "plant_monstera.png",
+    "type": "plant",
+    "portal_id": null,
+    "z_index": 12,
+    "bbox": [
+      636,
+      370,
+      789,
+      623
+    ],
+    "pos": {
+      "left": 41.2987,
+      "top": 36.1328,
+      "width": 9.9351,
+      "height": 24.707
+    },
+    "dimensions": [
+      153,
+      253
+    ]
+  },
+  "guitar": {
+    "file": "guitar.png",
+    "type": "interactive",
+    "portal_id": "guitar",
+    "z_index": 14,
+    "bbox": [
+      769,
+      336,
+      877,
+      624
+    ],
+    "pos": {
+      "left": 49.9351,
+      "top": 32.8125,
+      "width": 7.013,
+      "height": 28.125
+    },
+    "dimensions": [
+      108,
+      288
+    ]
+  },
+  "coffee_espresso": {
+    "file": "coffee_espresso.png",
+    "type": "interactive",
+    "portal_id": "coffee",
+    "z_index": 16,
+    "bbox": [
+      939,
+      327,
+      1027,
+      453
+    ],
+    "pos": {
+      "left": 60.974,
+      "top": 31.9336,
+      "width": 5.7143,
+      "height": 12.3047
+    },
+    "dimensions": [
+      88,
+      126
+    ]
+  },
+  "coffee_grinder": {
+    "file": "coffee_grinder.png",
+    "type": "interactive",
+    "portal_id": "coffee",
+    "z_index": 16,
+    "bbox": [
+      1008,
+      343,
+      1048,
+      451
+    ],
+    "pos": {
+      "left": 65.4545,
+      "top": 33.4961,
+      "width": 2.5974,
+      "height": 10.5469
+    },
+    "dimensions": [
+      40,
+      108
+    ]
+  },
+  "coffee_jar": {
+    "file": "coffee_jar.png",
+    "type": "interactive",
+    "portal_id": "coffee",
+    "z_index": 16,
+    "bbox": [
+      1041,
+      386,
+      1079,
+      449
+    ],
+    "pos": {
+      "left": 67.5974,
+      "top": 37.6953,
+      "width": 2.4675,
+      "height": 6.1523
+    },
+    "dimensions": [
+      38,
+      63
+    ]
+  },
+  "plant_table": {
+    "file": "plant_table.png",
+    "type": "plant",
+    "portal_id": null,
+    "z_index": 16,
+    "bbox": [
+      823,
+      619,
+      890,
+      715
+    ],
+    "pos": {
+      "left": 53.4416,
+      "top": 60.4492,
+      "width": 4.3506,
+      "height": 9.375
+    },
+    "dimensions": [
+      67,
+      96
+    ]
+  },
+  "cat_grey": {
+    "file": "cat_grey.png",
+    "type": "cat",
+    "portal_id": null,
+    "z_index": 15,
+    "bbox": [
+      1006,
+      770,
+      1279,
+      925
+    ],
+    "pos": {
+      "left": 65.3247,
+      "top": 75.1953,
+      "width": 17.7273,
+      "height": 15.1367
+    },
+    "dimensions": [
+      273,
+      155
+    ]
+  },
+  "cat_calico": {
+    "file": "cat_calico.png",
+    "type": "cat",
+    "portal_id": null,
+    "z_index": 15,
+    "bbox": [
+      1376,
+      556,
+      1540,
+      662
+    ],
+    "pos": {
+      "left": 89.3506,
+      "top": 54.2969,
+      "width": 10.6494,
+      "height": 10.3516
+    },
+    "dimensions": [
+      164,
+      106
+    ]
+  },
+  "turntable": {
+    "file": "turntable.png",
+    "type": "interactive",
+    "portal_id": "turntable",
+    "z_index": 18,
+    "bbox": [
+      1245,
+      715,
+      1540,
+      1004
+    ],
+    "pos": {
+      "left": 80.8442,
+      "top": 69.8242,
+      "width": 19.1558,
+      "height": 28.2227
+    },
+    "dimensions": [
+      295,
+      289
+    ]
+  },
+  "notebook": {
+    "file": "notebook.png",
+    "type": "desk_prop",
+    "portal_id": null,
+    "z_index": 22,
+    "bbox": [
+      361,
+      797,
+      630,
+      922
+    ],
+    "pos": {
+      "left": 23.4416,
+      "top": 77.832,
+      "width": 17.4675,
+      "height": 12.207
+    },
+    "dimensions": [
+      269,
+      125
+    ]
+  },
+  "mug": {
+    "file": "mug.png",
+    "type": "desk_prop",
+    "portal_id": null,
+    "z_index": 22,
+    "bbox": [
+      267,
+      699,
+      381,
+      808
+    ],
+    "pos": {
+      "left": 17.3377,
+      "top": 68.2617,
+      "width": 7.4026,
+      "height": 10.6445
+    },
+    "dimensions": [
+      114,
+      109
+    ]
+  },
+  "laptop": {
+    "file": "laptop.png",
+    "type": "interactive",
+    "portal_id": "laptop",
+    "z_index": 22,
+    "bbox": [
+      0,
+      661,
+      373,
+      925
+    ],
+    "pos": {
+      "left": 0.0,
+      "top": 64.5508,
+      "width": 24.2208,
+      "height": 25.7812
+    },
+    "dimensions": [
+      373,
+      264
+    ]
+  },
+  "plant_left_fg": {
+    "file": "plant_left_fg.png",
+    "type": "plant",
+    "portal_id": null,
+    "z_index": 25,
+    "bbox": [
+      0,
+      816,
+      267,
+      1024
+    ],
+    "pos": {
+      "left": 0.0,
+      "top": 79.6875,
+      "width": 17.3377,
+      "height": 20.3125
+    },
+    "dimensions": [
+      267,
+      208
+    ]
+  },
+  "plant_right_fg": {
+    "file": "plant_right_fg.png",
+    "type": "plant",
+    "portal_id": null,
+    "z_index": 25,
+    "bbox": [
+      1300,
+      900,
+      1540,
+      1024
+    ],
+    "pos": {
+      "left": 84.4156,
+      "top": 87.8906,
+      "width": 15.5844,
+      "height": 12.1094
+    },
+    "dimensions": [
+      240,
+      124
+    ]
+  }
+}

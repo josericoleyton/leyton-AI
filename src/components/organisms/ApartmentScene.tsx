@@ -2,9 +2,6 @@
 
 import React from 'react';
 import { ApartmentObject } from '@/components/molecules/ApartmentObject';
-import { AmbientPlant } from '@/components/atoms/AmbientPlant';
-import { NamePlaque } from '@/components/atoms/NamePlaque';
-import { FridgePostits } from '@/components/atoms/FridgePostits';
 import { ApartmentMobileTour } from '@/components/organisms/ApartmentMobileTour';
 
 export function ApartmentScene() {
@@ -13,278 +10,456 @@ export function ApartmentScene() {
       {/* Mobile vertical scrolling tour */}
       <ApartmentMobileTour />
 
-      {/* Desktop Single-Viewport Illustrated Scene */}
-      <div className="hidden md:block relative h-screen w-screen overflow-hidden bg-gradient-to-b from-[#FDFBF7] via-[#FAF5EC] to-[#F2EAE0] select-none">
-        {/* Architectural backdrop: Loft beams and window to mountains */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          {/* Ceiling beams */}
-          <div className="absolute top-0 left-0 right-0 h-10 border-b border-espresso/10 bg-[#EDE4D8]/30 flex justify-between px-20">
-            <div className="w-4 h-full bg-[#D8CBBA]/40" />
-            <div className="w-4 h-full bg-[#D8CBBA]/40" />
-            <div className="w-4 h-full bg-[#D8CBBA]/40" />
+      {/* Desktop Panoramic Illustrated Loft Scene - Full Screen */}
+      <div className="hidden md:block fixed inset-0 w-screen h-screen overflow-hidden bg-[#FAF5EC] select-none">
+        {/* Full Viewport Canvas */}
+        <div className="relative w-full h-full">
+          {/* 1. BASE BACKGROUND LAYER (fills entire viewport) */}
+          <img
+            src="/images/apartment/background.png"
+            alt="Ilustración del apartamento loft de Leyton"
+            className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none z-0"
+          />
+
+          {/* --- AMBIENT SUNBEAM OVERLAY ON BALCONY --- */}
+          <div
+            className="absolute pointer-events-none z-1 anim-sunbeam"
+            style={{
+              left: '72.5%',
+              top: '0%',
+              width: '23%',
+              height: '58%',
+              background:
+                'radial-gradient(ellipse at 60% 25%, rgba(254, 243, 199, 0.45) 0%, rgba(254, 215, 170, 0.2) 45%, transparent 75%)',
+            }}
+          />
+
+          {/* ======================================================== */}
+          {/* --- 8 INTERACTIVE LIFE PORTALS --- */}
+          {/* ======================================================== */}
+
+          {/* PORTAL 1: BALCONY (Travel / Viajes y horizontes) */}
+          <div
+            className="absolute z-10"
+            style={{
+              left: '72.7%',
+              top: '0%',
+              width: '22.1%',
+              height: '58.6%',
+            }}
+          >
+            <ApartmentObject
+              id="balcony"
+              name="Balcón a la montaña"
+              category="Viajes y horizontes"
+              href="/travel"
+              className="w-full h-full rounded-t-full"
+            >
+              <div className="w-full h-full relative group">
+                {/* Subtle golden hover wash */}
+                <div className="absolute inset-0 rounded-t-full transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-amber-300/15" />
+              </div>
+            </ApartmentObject>
           </div>
 
-          {/* Hardwood floor perspective lines */}
-          <div className="absolute bottom-0 left-0 right-0 h-[38%] bg-[#EFE7DC] border-t-2 border-[#D8C9B5]">
-            <div className="absolute inset-0 opacity-15 bg-[repeating-linear-gradient(90deg,#8C745E_0,#8C745E_2px,transparent_0,transparent_60px)]" />
+          {/* PORTAL 2: BOOKSHELF (Books / Libros y lecturas) */}
+          <div
+            className="absolute z-15"
+            style={{
+              left: '0%',
+              top: '0%',
+              width: '36.04%',
+              height: '29.2%',
+            }}
+          >
+            <ApartmentObject
+              id="bookshelf"
+              name="Biblioteca de pared"
+              category="Libros y lecturas"
+              href="/books"
+              className="w-full h-full"
+            >
+              <img
+                src="/images/apartment/bookshelf.png"
+                alt="Biblioteca de pared"
+                className="w-full h-full object-contain pointer-events-none"
+              />
+            </ApartmentObject>
           </div>
 
-          {/* Warm room lighting ambience */}
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#FFF8E7]/40 rounded-full blur-3xl pointer-events-none" />
-        </div>
-
-        {/* Ambient Wall Elements */}
-        <div className="absolute top-16 left-8 z-10">
-          <NamePlaque />
-        </div>
-
-        <div className="absolute bottom-28 left-6 z-10 hidden lg:block">
-          <FridgePostits />
-        </div>
-
-        <div className="absolute bottom-6 left-2 z-10">
-          <AmbientPlant className="w-28 h-36" />
-        </div>
-
-        <div className="absolute bottom-10 right-4 z-10">
-          <AmbientPlant className="w-32 h-44" />
-        </div>
-
-        {/* --- 8 INTERACTIVE OBJECTS SCATTERED HARMONIOUSLY IN THE LOFT --- */}
-
-        {/* 1. BALCONY WITH MOUNTAIN VIEW (Travel) - Top Right Center */}
-        <div className="absolute top-14 right-12 lg:right-28 z-20">
-          <ApartmentObject
-            id="balcony"
-            name="Balcón a la montaña"
-            category="Viajes y horizontes"
-            href="/travel"
+          {/* PORTAL 3: TV RETRO (Football / Fútbol y pizarra) */}
+          <div
+            className="absolute z-16"
+            style={{
+              left: '12.14%',
+              top: '32.91%',
+              width: '13.77%',
+              height: '19.43%',
+            }}
           >
-            <div className="w-56 h-36 lg:w-64 lg:h-40 rounded-t-full bg-gradient-to-b from-[#A4C4D7] to-[#D5E6EE] border-4 border-[#8C745E] shadow-lg overflow-hidden relative group">
-              {/* Mountains silhouette */}
-              <svg viewBox="0 0 100 60" className="absolute bottom-0 w-full h-full" preserveAspectRatio="none">
-                <polygon points="0,60 25,25 50,60" fill="#758A7A" />
-                <polygon points="35,60 65,15 95,60" fill="#5F7565" />
-                <polygon points="70,60 88,32 100,60" fill="#8EA393" />
-                {/* Sun */}
-                <circle cx="80" cy="18" r="6" fill="#FCE5B2" />
-              </svg>
-              {/* Balcony railing */}
-              <div className="absolute bottom-0 inset-x-0 h-7 bg-espresso/80 border-t border-cream flex justify-around items-center px-2">
-                <div className="w-1 h-full bg-cream/40" />
-                <div className="w-1 h-full bg-cream/40" />
-                <div className="w-1 h-full bg-cream/40" />
-                <div className="w-1 h-full bg-cream/40" />
-                <div className="w-1 h-full bg-cream/40" />
+            <ApartmentObject
+              id="tv"
+              name="TV retro"
+              category="Fútbol y pizarra"
+              href="/football"
+              className="w-full h-full"
+            >
+              <div className="relative w-full h-full anim-tv">
+                <img
+                  src="/images/apartment/tv.png"
+                  alt="TV retro con partido de fútbol"
+                  className="w-full h-full object-contain pointer-events-none"
+                />
               </div>
-            </div>
-          </ApartmentObject>
-        </div>
+            </ApartmentObject>
+          </div>
 
-        {/* 2. BOOKSHELF (Books) - Top Left Wall */}
-        <div className="absolute top-16 left-60 lg:left-72 z-20">
-          <ApartmentObject
-            id="bookshelf"
-            name="Biblioteca de pared"
-            category="Libros y lecturas"
-            href="/books"
+          {/* PORTAL 4: MOVIE SHELF & FILM REEL (Movies / Cine y cintas) */}
+          {/* Ubicado en z-15 para verse detrás de la laptop (z-22) */}
+          <div
+            className="absolute z-15"
+            style={{
+              left: '0%',
+              top: '34.57%',
+              width: '15.06%',
+              height: '35.0%',
+            }}
           >
-            <div className="w-44 h-32 lg:w-48 lg:h-36 bg-[#B59E87] border-4 border-[#8C745E] rounded-md shadow-md p-2 flex flex-col justify-between">
-              {/* Top shelf */}
-              <div className="flex items-end space-x-1 border-b-4 border-[#8C745E] pb-1 h-14">
-                <div className="w-4 h-12 bg-terracotta rounded-xs" />
-                <div className="w-5 h-10 bg-sage rounded-xs" />
-                <div className="w-4 h-13 bg-espresso rounded-xs" />
-                <div className="w-3 h-9 bg-cream rounded-xs border border-espresso/20" />
-                <div className="w-5 h-11 bg-terracotta-dark rounded-xs" />
-              </div>
-              {/* Bottom shelf */}
-              <div className="flex items-end space-x-1 pb-0.5 h-14">
-                <div className="w-5 h-11 bg-sage-dark rounded-xs" />
-                <div className="w-4 h-9 bg-terracotta rounded-xs" />
-                <div className="w-6 h-12 bg-espresso rounded-xs" />
-                <div className="w-4 h-10 bg-cream rounded-xs border border-espresso/20" />
-              </div>
-            </div>
-          </ApartmentObject>
-        </div>
-
-        {/* 3. TV RETRO (Football) - Left Wall */}
-        <div className="absolute top-56 left-16 lg:left-32 z-20">
-          <ApartmentObject
-            id="tv"
-            name="TV retro"
-            category="Fútbol y pizarra"
-            href="/football"
-          >
-            <div className="w-48 h-36 lg:w-52 lg:h-40 bg-[#3A3331] rounded-2xl p-2.5 shadow-xl border-4 border-[#241F1D] flex space-x-2 items-center">
-              {/* Screen showing football field */}
-              <div className="flex-1 h-full rounded-xl bg-gradient-to-b from-[#2E6B3E] to-[#1F4F2C] border-2 border-black/40 relative overflow-hidden flex items-center justify-center">
-                {/* Field markings */}
-                <div className="w-16 h-16 rounded-full border border-white/50 flex items-center justify-center">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white animate-bounce" />
+            <ApartmentObject
+              id="movies"
+              name="Estantería de películas"
+              category="Cine y cintas"
+              href="/movies"
+              className="w-full h-full"
+            >
+              <div className="relative w-full h-full">
+                {/* Film Reel sitting on top of the shelf (STATIC, NO ROTATION OF BASE) */}
+                <div
+                  className="absolute"
+                  style={{
+                    left: '26.7%',
+                    top: '0%',
+                    width: '50.9%',
+                    height: '34.6%',
+                  }}
+                >
+                  <img
+                    src="/images/apartment/film_reel.png"
+                    alt="Carrete de películas"
+                    className="w-full h-full object-contain pointer-events-none"
+                  />
                 </div>
-                <div className="absolute inset-x-0 h-0.5 bg-white/40 top-1/2 -translate-y-1/2" />
-              </div>
-              {/* Dials */}
-              <div className="w-6 flex flex-col justify-around h-full py-2">
-                <div className="w-4 h-4 rounded-full bg-[#B0A18F] border border-black/30" />
-                <div className="w-4 h-4 rounded-full bg-[#B0A18F] border border-black/30" />
-                <div className="w-4 h-2 bg-black/40 rounded-xs" />
-              </div>
-            </div>
-          </ApartmentObject>
-        </div>
-
-        {/* 4. MOVIE SHELF (Movies) - Wall Unit near TV */}
-        <div className="absolute top-64 left-72 lg:left-96 z-20">
-          <ApartmentObject
-            id="movies"
-            name="Estantería de películas"
-            category="Cine y cintas"
-            href="/movies"
-          >
-            <div className="w-32 h-24 lg:w-36 lg:h-28 bg-[#8C745E] rounded-md border-2 border-[#6D5A47] p-2 flex flex-col justify-end shadow-md">
-              <div className="flex items-end space-x-1.5 h-full">
-                <div className="w-3.5 h-16 bg-[#2B3A42] rounded-xs border-t-2 border-red-500" />
-                <div className="w-3.5 h-14 bg-[#3E2723] rounded-xs border-t-2 border-amber-400" />
-                <div className="w-3.5 h-16 bg-[#1A237E] rounded-xs border-t-2 border-blue-400" />
-                <div className="w-3.5 h-15 bg-[#212121] rounded-xs border-t-2 border-emerald-400" />
-                <div className="w-3.5 h-16 bg-[#4A148C] rounded-xs border-t-2 border-purple-400" />
-              </div>
-            </div>
-          </ApartmentObject>
-        </div>
-
-        {/* 5. LAPTOP ON WORK DESK (Portfolio) - Bottom Left */}
-        <div className="absolute bottom-12 left-28 lg:left-48 z-20">
-          <ApartmentObject
-            id="laptop"
-            name="Laptop abierta"
-            category="Portafolio profesional"
-            href="/portfolio"
-          >
-            <div className="relative">
-              {/* Desk surface edge */}
-              <div className="w-64 lg:w-72 h-44 bg-[#D1C2AF] rounded-xl border-t-4 border-[#B8A692] shadow-2xl p-4 flex flex-col items-center justify-center">
-                {/* Laptop body */}
-                <div className="relative flex flex-col items-center">
-                  {/* Screen (always open) */}
-                  <div className="w-36 h-24 lg:w-40 lg:h-28 bg-[#201C1B] rounded-t-lg border-2 border-[#4A423F] p-1.5 shadow-md flex flex-col justify-between">
-                    <div className="space-y-1">
-                      <div className="w-12 h-1 bg-terracotta rounded" />
-                      <div className="w-20 h-1 bg-sage rounded" />
-                      <div className="w-16 h-1 bg-cream/70 rounded" />
-                    </div>
-                    <div className="text-[9px] font-mono text-terracotta-light">
-                      &gt; code &amp; design_
-                    </div>
-                  </div>
-                  {/* Base / Keyboard */}
-                  <div className="w-44 h-3 lg:w-48 lg:h-3.5 bg-[#4A423F] rounded-b-md shadow-lg border-t border-white/20" />
-                </div>
-                {/* Coffee mug near desk */}
-                <div className="absolute right-4 bottom-5 w-5 h-6 bg-cream rounded-sm border border-espresso/20 flex items-center justify-center shadow-xs">
-                  <div className="w-2 h-1 bg-espresso/60 rounded-full" />
+                {/* Movie Shelf Unit with VHS tapes */}
+                <div
+                  className="absolute"
+                  style={{
+                    left: '0%',
+                    top: '16.4%',
+                    width: '100%',
+                    height: '83.6%',
+                  }}
+                >
+                  <img
+                    src="/images/apartment/movie_shelf.png"
+                    alt="Mueble de películas y cintas VHS"
+                    className="w-full h-full object-contain pointer-events-none"
+                  />
                 </div>
               </div>
-            </div>
-          </ApartmentObject>
-        </div>
+            </ApartmentObject>
+          </div>
 
-        {/* 6. GUITAR ON STAND (Guitar) - Center Room */}
-        <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-20">
-          <ApartmentObject
-            id="guitar"
-            name="Guitarra acústica"
-            category="Música y cuerdas"
-            href="/guitar"
+          {/* PORTAL 5: GUITAR (Guitar / Música y cuerdas) */}
+          {/* Selector correctamente ubicado en la guitarra (L15: x=49.94%, y=32.81%) */}
+          <div
+            className="absolute z-14"
+            style={{
+              left: '49.94%',
+              top: '32.81%',
+              width: '7.01%',
+              height: '28.13%',
+            }}
           >
-            <div className="w-24 h-48 lg:w-28 lg:h-56 relative flex flex-col items-center">
-              <svg viewBox="0 0 100 200" className="w-full h-full drop-shadow-xl">
-                {/* Guitar Stand */}
-                <path d="M25,185 L50,130 L75,185" stroke="#423B38" strokeWidth="4" fill="none" />
-                <line x1="50" y1="130" x2="50" y2="70" stroke="#423B38" strokeWidth="4" />
+            <ApartmentObject
+              id="guitar"
+              name="Guitarra acústica"
+              category="Música y cuerdas"
+              href="/guitar"
+              className="w-full h-full"
+            >
+              <img
+                src="/images/apartment/guitar.png"
+                alt="Guitarra acústica en su soporte"
+                className="w-full h-full object-contain pointer-events-none hover:rotate-1 transition-transform duration-300"
+              />
+            </ApartmentObject>
+          </div>
 
-                {/* Headstock */}
-                <polygon points="44,20 56,20 54,45 46,45" fill="#5C382A" />
-                {/* Neck */}
-                <rect x="46" y="45" width="8" height="60" fill="#7A4B37" />
-                <line x1="50" y1="25" x2="50" y2="105" stroke="#FFFFFF" strokeWidth="1" opacity="0.6" />
-
-                {/* Body */}
-                <ellipse cx="50" cy="120" rx="20" ry="16" fill="#C86D51" stroke="#5C382A" strokeWidth="3" />
-                <ellipse cx="50" cy="150" rx="28" ry="24" fill="#C86D51" stroke="#5C382A" strokeWidth="3" />
-
-                {/* Soundhole */}
-                <circle cx="50" cy="132" r="8" fill="#2C2523" />
-                {/* Bridge */}
-                <rect x="42" y="156" width="16" height="5" fill="#2C2523" rx="1" />
-              </svg>
-            </div>
-          </ApartmentObject>
-        </div>
-
-        {/* 7. COFFEE TABLE WITH DRIPPER (Coffee) - Center Right */}
-        <div className="absolute bottom-20 right-80 lg:right-96 z-20">
-          <ApartmentObject
-            id="coffee"
-            name="Mesa de café"
-            category="Métodos de café"
-            href="/coffee"
+          {/* PORTAL 6: COFFEE BAR (Coffee / Métodos de café) */}
+          <div
+            className="absolute z-16"
+            style={{
+              left: '60.5%',
+              top: '31.5%',
+              width: '9.8%',
+              height: '14.2%',
+            }}
           >
-            <div className="w-40 h-28 lg:w-44 lg:h-32 bg-[#E6DACB] rounded-2xl border-4 border-[#C7B5A1] shadow-lg p-2.5 flex flex-col items-center justify-between">
-              {/* Dripper & Server */}
-              <div className="flex flex-col items-center">
-                {/* V60 Cone */}
-                <svg viewBox="0 0 40 20" className="w-10 h-5">
-                  <polygon points="4,2 36,2 20,18" fill="#FDFBF7" stroke="#C86D51" strokeWidth="2" />
-                </svg>
-                {/* Glass Server */}
-                <div className="w-12 h-10 bg-sky-100/60 border-2 border-espresso/30 rounded-b-lg flex items-end justify-center pb-1">
-                  <div className="w-9 h-4 bg-[#633A26] rounded-xs opacity-90" />
+            <ApartmentObject
+              id="coffee"
+              name="Mesa de café"
+              category="Métodos de café"
+              href="/coffee"
+              className="w-full h-full"
+            >
+              <div className="relative w-full h-full">
+                {/* Espresso Machine */}
+                <img
+                  src="/images/apartment/coffee_espresso.png"
+                  alt="Cafetera espresso"
+                  className="absolute left-0 bottom-0 w-[58%] h-auto object-contain pointer-events-none"
+                />
+                {/* Rising steam from espresso */}
+                <div className="absolute left-[18%] top-[5%] pointer-events-none anim-steam-1">
+                  <div className="w-2 h-4 rounded-full bg-cream/70 blur-[1px]" />
                 </div>
+                {/* Coffee Grinder */}
+                <img
+                  src="/images/apartment/coffee_grinder.png"
+                  alt="Molino de café"
+                  className="absolute left-[48%] bottom-0 w-[27%] h-auto object-contain pointer-events-none"
+                />
+                {/* Coffee Beans Jar */}
+                <img
+                  src="/images/apartment/coffee_jar.png"
+                  alt="Frasco con granos de café"
+                  className="absolute left-[72%] bottom-0 w-[26%] h-auto object-contain pointer-events-none"
+                />
               </div>
-              <div className="text-[10px] font-mono text-espresso/70 font-semibold">
-                1:15 Pour-over
-              </div>
-            </div>
-          </ApartmentObject>
-        </div>
+            </ApartmentObject>
+          </div>
 
-        {/* 8. TURNTABLE ON CABINET (Music Listening) - Bottom Right */}
-        <div className="absolute bottom-10 right-16 lg:right-28 z-20">
-          <ApartmentObject
-            id="turntable"
-            name="Tocadiscos vintage"
-            category="Música y vinilos"
-            href="/music"
+          {/* PORTAL 7: TURNTABLE (Music / Música y vinilos) */}
+          <div
+            className="absolute z-18"
+            style={{
+              left: '80.84%',
+              top: '69.82%',
+              width: '19.16%',
+              height: '28.22%',
+            }}
           >
-            <div className="w-48 h-36 lg:w-52 lg:h-40 bg-[#8C6D58] rounded-xl border-4 border-[#6E5544] shadow-2xl p-3 flex flex-col justify-between">
-              {/* Turntable Platter and Tonearm */}
-              <div className="relative flex-1 bg-[#2C2523] rounded-lg p-2 flex items-center justify-between border border-black/40">
-                {/* Spinning vinyl */}
-                <div className="w-20 h-20 rounded-full bg-[#1A1615] border border-white/10 flex items-center justify-center shadow-md animate-spin" style={{ animationDuration: '5s' }}>
-                  <div className="w-7 h-7 rounded-full bg-terracotta border border-cream" />
-                </div>
-                {/* Tonearm */}
-                <div className="w-8 h-16 flex flex-col items-center">
-                  <div className="w-3 h-3 rounded-full bg-[#B3A394]" />
-                  <div className="w-0.5 h-10 bg-[#B3A394] origin-top rotate-12" />
-                </div>
+            <ApartmentObject
+              id="turntable"
+              name="Tocadiscos vintage"
+              category="Música y vinilos"
+              href="/music"
+              className="w-full h-full"
+            >
+              <img
+                src="/images/apartment/turntable.png"
+                alt="Tocadiscos vintage y vinilo"
+                className="w-full h-full object-contain pointer-events-none"
+              />
+            </ApartmentObject>
+          </div>
+
+          {/* PORTAL 8: LAPTOP ON DESK (Portfolio / Portafolio profesional) */}
+          {/* z-22 para estar en primer plano sobre el mueble de películas (z-15) */}
+          <div
+            className="absolute z-22"
+            style={{
+              left: '0%',
+              top: '64.55%',
+              width: '24.22%',
+              height: '25.78%',
+            }}
+          >
+            <ApartmentObject
+              id="laptop"
+              name="Laptop abierta"
+              category="Portafolio profesional"
+              href="/portfolio"
+              className="w-full h-full"
+            >
+              <div className="relative w-full h-full anim-laptop-screen">
+                <img
+                  src="/images/apartment/laptop.png"
+                  alt="Laptop de desarrollo abierta con código"
+                  className="w-full h-full object-contain pointer-events-none"
+                />
               </div>
-              {/* Volume / Pitch sliders */}
-              <div className="flex items-center justify-between px-1 pt-1">
-                <span className="text-[9px] uppercase tracking-wider font-bold text-cream/90 font-mono">
-                  33 RPM
-                </span>
-                <div className="flex space-x-1">
-                  <div className="w-2 h-2 rounded-full bg-amber-400" />
-                  <div className="w-2 h-2 rounded-full bg-sage" />
-                </div>
+            </ApartmentObject>
+          </div>
+
+          {/* ======================================================== */}
+          {/* --- AMBIENT ANIMATED PLANTS --- */}
+          {/* ======================================================== */}
+
+          {/* Large Floor Monstera (L13: x=41.30%, y=36.13%, al lado de la guitarra) */}
+          <div
+            className="absolute pointer-events-none z-12 anim-plant-monstera"
+            style={{
+              left: '41.30%',
+              top: '36.13%',
+              width: '9.94%',
+              height: '24.71%',
+            }}
+          >
+            <img
+              src="/images/apartment/plant_monstera.png"
+              alt="Planta Monstera"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Coffee Table Succulent */}
+          <div
+            className="absolute pointer-events-none z-16 anim-plant-table"
+            style={{
+              left: '53.44%',
+              top: '60.45%',
+              width: '4.35%',
+              height: '9.38%',
+            }}
+          >
+            <img
+              src="/images/apartment/plant_table.png"
+              alt="Suculenta en mesa de centro"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Foreground Leaves (Bottom Left corner) */}
+          <div
+            className="absolute pointer-events-none z-25 anim-plant-fg-left"
+            style={{
+              left: '0%',
+              top: '79.69%',
+              width: '17.34%',
+              height: '20.31%',
+            }}
+          >
+            <img
+              src="/images/apartment/plant_left_fg.png"
+              alt="Hojas en primer plano izquierdo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Foreground Leaves (Bottom Right corner) */}
+          <div
+            className="absolute pointer-events-none z-25 anim-plant-fg-right"
+            style={{
+              left: '84.42%',
+              top: '87.89%',
+              width: '15.58%',
+              height: '12.11%',
+            }}
+          >
+            <img
+              src="/images/apartment/plant_right_fg.png"
+              alt="Hojas en primer plano derecho"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* ======================================================== */}
+          {/* --- ANIMATED CATS --- */}
+          {/* ======================================================== */}
+
+          {/* Grey Tabby Cat (Sleeping on Rug) - Con Zzz siempre visible */}
+          <div
+            className="absolute z-15 anim-cat-grey group cursor-default"
+            style={{
+              left: '65.32%',
+              top: '75.20%',
+              width: '17.73%',
+              height: '15.14%',
+            }}
+            title="Gato atigrado durmiendo plácidamente"
+          >
+            <img
+              src="/images/apartment/cat_grey.png"
+              alt="Gato atigrado gris durmiendo en la alfombra"
+              className="w-full h-full object-contain pointer-events-none"
+            />
+            {/* Zzz flotante SIEMPRE VISIBLE con animación suave */}
+            <div className="absolute -top-3.5 left-[38%] pointer-events-none anim-badge-float bg-espresso/90 text-cream text-[11px] font-mono font-bold px-2 py-0.5 rounded-full shadow-md border border-cream/20 flex items-center space-x-1">
+              <span>Zzz...</span>
+            </div>
+          </div>
+
+          {/* Calico Cat (Resting on Sofa) - Con Ronroneo siempre visible */}
+          <div
+            className="absolute z-15 anim-cat-calico group cursor-default"
+            style={{
+              left: '89.35%',
+              top: '54.30%',
+              width: '10.65%',
+              height: '10.35%',
+            }}
+            title="Gata calicó descansando en el sofá"
+          >
+            <img
+              src="/images/apartment/cat_calico.png"
+              alt="Gata calicó descansando en el sofá"
+              className="w-full h-full object-contain pointer-events-none"
+            />
+            {/* Ronroneo flotante SIEMPRE VISIBLE con animación suave */}
+            <div className="absolute -top-3.5 left-[30%] pointer-events-none anim-badge-float-alt bg-terracotta-dark text-cream text-[10px] font-mono font-medium px-2 py-0.5 rounded-full shadow-md border border-cream/20 flex items-center space-x-1">
+              <span>Purr... ♪</span>
+            </div>
+          </div>
+
+          {/* ======================================================== */}
+          {/* --- DESK PROPS --- */}
+          {/* ======================================================== */}
+
+          {/* Coffee Mug with mountain logo y humo abundante */}
+          <div
+            className="absolute pointer-events-none z-22"
+            style={{
+              left: '17.34%',
+              top: '68.26%',
+              width: '7.40%',
+              height: '10.64%',
+            }}
+          >
+            <div className="relative w-full h-full">
+              <img
+                src="/images/apartment/mug.png"
+                alt="Taza de café en el escritorio"
+                className="w-full h-full object-contain"
+              />
+              {/* Humo abundante multi-pluma subiendo desde la taza */}
+              <div className="absolute left-[34%] -top-4 w-6 h-8 pointer-events-none">
+                {/* Wisp 1 */}
+                <div className="absolute left-1 bottom-0 w-2 h-5 rounded-full bg-cream/75 blur-[1.5px] anim-steam-1" />
+                {/* Wisp 2 */}
+                <div className="absolute left-2.5 bottom-0 w-2.5 h-6 rounded-full bg-cream/80 blur-[1px] anim-steam-2" />
+                {/* Wisp 3 */}
+                <div className="absolute left-4 bottom-0 w-2 h-4.5 rounded-full bg-cream/65 blur-[1.2px] anim-steam-3" />
               </div>
             </div>
-          </ApartmentObject>
+          </div>
+
+          {/* Spiral Notebook with Pen */}
+          <div
+            className="absolute pointer-events-none z-22"
+            style={{
+              left: '23.44%',
+              top: '77.83%',
+              width: '17.47%',
+              height: '12.21%',
+            }}
+          >
+            <img
+              src="/images/apartment/notebook.png"
+              alt="Libreta con bolígrafo"
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>

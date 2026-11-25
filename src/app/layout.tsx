@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Jose Leyton — Apartamento & Portafolio',
+  title: 'Leyton — Apartamento & Portafolio',
   description:
     'Un espacio interactivo inspirado en la vida lenta, el diseño reflexivo y la tranquilidad cotidiana.',
 };
